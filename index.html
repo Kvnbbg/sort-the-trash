@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort the Trash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Sort the Trash Automatically by kvnbbg.fr</h1>
+    <form id="trashForm">
+        <fieldset>
+            <legend>User Information</legend>
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </fieldset>
+
+        <fieldset>
+            <legend>Sorting Preferences</legend>
+            <label for="recyclable">Recyclable</label>
+            <input type="checkbox" id="recyclable" name="recyclable">
+
+            <label for="organic">Organic Waste</label>
+            <input type="checkbox" id="organic" name="organic">
+
+            <label for="non-recyclable">Non-Recyclable</label>
+            <input type="checkbox" id="non-recyclable" name="non-recyclable">
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Trash Bin</legend>
+            <label for="bin-type">Bin Type</label>
+            <select name="bin-type" id="bin-type">
+                <option>Plastic</option>
+                <option>Paper</option>
+                <option>Glass</option>
+                <option>Organic</option>
+                <option>General Waste</option>
+            </select>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
