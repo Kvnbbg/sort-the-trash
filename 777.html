@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>777 in Sort the trash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        #wormEffect {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            animation: popEffect 0.8s ease-out;
+        }
+        @keyframes popEffect {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <button><a href="index.html" >Back</button>
+        <h1>Digital Worm Extraction from 777 in Turbo Zoo</h1>
+        <button>The Malware Scanner</button>
+        <div class="form-container">
+            <form id="wormForm">
+                <label for="metaverseData">Metaverse Data:</label>
+                <textarea id="metaverseData" name="metaverseData" rows="5">In this virtual world, fear and anxiety creep into every corner. Insecurity lurks, threatening to undermine progress.</textarea>
+                <button type="submit">Extract Worm</button>
+            </form>
+        </div>
+        <div class="results">
+            <h2>Results</h2>
+            <p id="cleanedData" class="success">Cleaned Metaverse Data: </p>
+            <p id="recycledMetadata" class="highlight">Recycled Metadata: </p>
+        </div>
+        <div id="vault">
+            Vault: <span id="moneyAmount">€0 purification cost</span>
+        </div>
+        <button onclick="addMoney()">Purify</button>
+        <div id="eventLog"></div>
+    </div>
+
+    <div id="wormEffect" style="display: none;">🐛✨</div>
+              <section class="info-section">
+                <h2>How the App Works</h2>
+                <p>This app compares two links character by character to verify if they are identical. Simply paste the two links into the input fields and click "Compare Links." A green background indicates a match, while a red background indicates a mismatch.</p>
+                <p>For more details, visit: <a href="https://kvnbbg.fr" target="_blank">https://kvnbbg.fr</a></p>
+                <p>Explore my work: <a href="https://linktr.ee/kvnbbg" target="_blank">/kvnbbg</a></p>
+                <p>Follow our discord: <a href="https://discord.gg/VTSQM38uZT" target="_blank">discord</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Sort the trash</p>
+        </footer>
+
+    <script>
+        let moneyAmount = 0;
+        const wormKeywords = ["fear", "anxiety", "insecurity", "doubt", "stress", "self-doubt"];
+        const vaultGoal = 1000;
+
+        document.getElementById('wormForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const metaverseData = document.getElementById('metaverseData').value.trim();
+            const sanitizedData = sanitizeInput(metaverseData);
+            const [cleanedData, recycledMetadata] = extractAndRecycleWorm(sanitizedData);
+
+            document.getElementById('cleanedData').textContent = 'Cleaned Metaverse Data: ' + cleanedData;
+            document.getElementById('recycledMetadata').textContent = 'Recycled Metadata: ' + recycledMetadata.join(', ');
+            
+            triggerEffect();
+        });
+
+        function sanitizeInput(data) {
+            return data.replace(/<[^>]*>?/gm, '').trim(); // Remove HTML tags
+        }
+
+        function extractAndRecycleWorm(data) {
+            const pattern = new RegExp(`\\b(${wormKeywords.join('|')})\\b`, 'gi');
+            const matches = data.match(pattern) || [];
+            const cleanedData = data.replace(pattern, '').replace(/\s{2,}/g, ' ').trim();
+            const recycledMetadata = matches.map(word => word.toUpperCase());
+            return [cleanedData, recycledMetadata];
+        }
+
+        function addMoney() {
+            moneyAmount += 100;
+            document.getElementById("moneyAmount").textContent = "€" + moneyAmount + " purification cost";
+
+            checkVaultGoal();
+        }
+
+        function checkVaultGoal() {
+            if (moneyAmount >= vaultGoal) {
+                alert("Congratulations! You've reached the vault goal!");
+            }
+        }
+
+        function triggerEffect() {
+            const effect = document.getElementById('wormEffect');
+            effect.style.display = 'block';
+
+            setTimeout(() => {
+                effect.style.display = 'none';
+            }, 800);
+        }
+    </script>
+</body>
+</html>
